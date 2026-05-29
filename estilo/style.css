@@ -2,11 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root{
+    --cor0trans:#03e181bd;
     --cor0: #03E182;
     --cor2: #075655;
+    --cor3trans: #1d1d1d8c;
     --cor3: #0000;
     --cor4: #ffff;
     --cor5: #24242454;
+    --cor6: #c2c2c2;
+    --cor7: #010c0c;
 
     --font-padrao: "Poppins", sans-serif;
 }
@@ -16,22 +20,34 @@
     padding: 0;
     font-family: var(--font-padrao)
 }
+
 html{
     scroll-behavior: smooth;
 }
 html, body{
     height: 100vh;
-    width: 100vw;
-   i
+    width: 100%;
+   
 }
+
+/*Cabeçalho*/
 header{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background-color: var(--cor2); 
+    width: 100%;
+    background-color: var(--cor7);
+    position: fixed; 
+
+    top: 0;
+    left: 0;
+    z-index: 50;
+
+    transition: all;
 }
 .logo img{
     width: 200px;
+
 }
 nav{
     display: flex;
@@ -39,7 +55,7 @@ nav{
     
 }
 nav > a{
-    color: var(--cor4);
+    color: var(--cor6);
     text-decoration: none;
     margin: 30px;
 }
@@ -49,15 +65,15 @@ nav a:hover{
    color: var(--cor0);
 }
 .btn{
-    background-color: var(--cor0);
     padding: 10px;
     border-radius: 50px;
     text-align: center;
-    border: 1px solid var(--cor3);
+    border: 1px solid var(--cor0);
     font-family: Arial, Helvetica, sans-serif;
     width: 150px;
 }
 .btn:hover{
+    box-shadow: 2px 2px 10px var(--cor0);
     transform: scale(1.1);
     transition: 0.3s;
 }
@@ -65,18 +81,50 @@ nav a:hover{
     color: var(--cor4);
     text-decoration: none;
 }
-.btn-group{
+
+/*section-Inicio*/
+.container-text{
+    margin: 15px;
+}
+.container{
     display: flex;
     align-items: center;
+    justify-content: center;
+    background: #032120;
+    background: linear-gradient(180deg,#010c0c 0%, rgba(5, 59, 57, 1) 40%, rgba(7, 86, 85, 1) 80%);
+}
+.container-conteudo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 750px;
+    margin: 120px;
+}
+.container-text h1{
+    font-size: 60px;
+    color: var(--cor4);
+    margin: 20px;
+}
+.destaque{
+    color: var(--cor0);
+}
+.container-text p{
+    margin: 20px;
+    color: var(--cor6);
+}
+.btn-group{
+    display: flex;
+    width: 680px;
     gap: 30px;
 
 }
 .btn-simule{
     padding: 15px;
-    border-radius: 50px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px 1px var(--cor0);
     text-align: center;
-    background-color: #03E182;
-    width: 180px;
+    background-color: var(--cor0);
+    width: 200px;
 }
 .btn-simule a{
     text-decoration: none;
@@ -87,7 +135,7 @@ nav a:hover{
 }
 .btn-whatsapp{
     padding: 15px;
-    border-radius: 50px;
+    border-radius: 15px;
     text-align: center;
     border: 1px solid var(--cor4);
     width: 180px;
@@ -96,50 +144,114 @@ nav a:hover{
 .btn-whatsapp a{
     text-decoration: none;
     color: var(--cor4);
-    font-family: var(--font-padrao)
-    font-size: 18px;
-    border: 2px solid var(--cor3);
-}
-.container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--cor2);
+    font-family: var(--font-padrao);
 
 }
-.container-conteudo{
+.group-prova{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 600px;
-}
-h1, p{
+    width: 680px;
     margin: 30px;
+    color: var(--cor6);
 }
-
+.group-prova p{
+    font-size: 14px;
+    margin: 10px;
+}
 .container-img img{
     width: 600px;
     border: 1px solid var(--cor3);
     border-radius: 25px;
-    margin: 100px;
     box-shadow: 5px 0px 5px var(--cor5);
     
 }
-.product{
+/*section-beneficios*/
+.beneficio-container{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 100px;
-    text-align: center;
+    padding: 100px;
+    background-color: var(--cor2);
 }
-.grid{
+.beneficio-conteudo{
     display: flex;
-    margin-top: 100px;
-    margin-bottom: 200px;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 600px;
+    padding: 30px;
+
+}
+.beneficio-tag{
+    margin: 5px;
+    background-color: var(--cor3trans);
+    border: 1px solid var(--cor0);
+    color: var(--cor0);
+    padding: 1px;
+    width: 300px;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+.beneficio-title{
+    margin: 20px;
+    font-size: 30px;
+    line-height: 1.5em;
+    color: var(--cor4);
+}
+.beneficio-text{
+    margin: 20px;
+    color: var(--cor6);
 }
 .group{
-    width: 286px;
-    padding: 10px;
+    display: flex;  
+    align-items: center;
+    
+}
+
+.group-box{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 185px;
+    background-color: var(--cor3trans);
+    border-radius: 15px;
     border: 1px solid var(--cor0);
+    padding: 30px;
+    margin: 10px;
+}
+.group-box:hover{
+    transform: scale(1.01);
+    transition: 0.3s;
+    box-shadow: 2px 2px 10px var(--cor0);
+}
+.group-box-icone{
+    display: flex;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor0trans);
+    border-radius: 10px;
+}
+.group-box-title{
+    color: var(--cor4);
+    margin-bottom: 10px;
+}
+.group-box-text{
+    color: var(--cor6);
+    margin-bottom: 10px;
+}
+.group-box-especial{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 185px;
+    background-color: var(--cor3trans);
+    border-radius: 15px;
+    border: 1px solid var(--cor0);
+    padding: 30px;
     margin: 10px;
 }
