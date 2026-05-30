@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root{
-    --cor0trans:#03e181bd;
+    --cor0trans:#00db7c9a;
     --cor0: #03E182;
     --cor2: #075655;
     --cor3trans: #1d1d1d8c;
@@ -22,13 +22,13 @@
 }
 
 html{
-    scroll-behavior: smooth;
+    
 }
 html, body{
     height: 100vh;
     width: 100%;
     overflow-x: hidden;
-   
+    scroll-behavior: smooth;
 }
 
 /*Cabeçalho*/
@@ -101,6 +101,7 @@ nav a:hover{
     align-items: center;
     justify-content: center;
     width: 100%;
+    height: 100vh;
     flex-wrap: wrap;
     background: #032120;
     background: linear-gradient(180deg,#010c0c 0%, rgba(5, 59, 57, 1) 40%, rgba(7, 86, 85, 1) 80%);
@@ -110,9 +111,9 @@ nav a:hover{
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
-    max-width: 750px;
+    max-width: 700px;
     width: 100%;
-    margin: 120px;
+    margin-top: 130px;
 }
 .container-text h1{
     font-size: 60px;
@@ -193,6 +194,7 @@ nav a:hover{
     border: 1px solid var(--cor3);
     border-radius: 25px;
     box-shadow: 5px 0px 5px var(--cor5);
+    margin-top: 130px;
     
 }
 /*section-beneficios*/
@@ -200,6 +202,7 @@ nav a:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100vh;
     flex-wrap: wrap;
     padding: 100px;
     background-color: var(--cor2);
@@ -297,7 +300,7 @@ nav a:hover{
     padding: 30px;
     margin: 10px;
 }
-.funciona-container{
+.funcion-container{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -305,7 +308,7 @@ nav a:hover{
     padding: 100px;
     background-color: var(--cor1);
 }
-.funciona-conteudo{
+.funcion-conteudo{
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -315,22 +318,148 @@ nav a:hover{
     width: 100%;
     padding: 30px;
 }
-.funciona-tag{
+.funcion-tag{
     Margin: 5px;
     background-color: var(--cor3trans);
     border: 1px solid var(--cor3);
     color: var(--cor0);
     padding: 1px;
-    max-width: 300px;
+    max-width: 250px;
     width: 100%;
     border-radius: 20px;
     font-size: 16px;
 }
-.funciona-title{
+.funcion-title{
     margin: 20px;
     font-size: 30px;
     line-height: 1.5em;
     color: var(--cor2);
     max-width: 650px;
     width: 100%;
+}
+.funcion-relative{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+
+    
+}
+.funcion-absoluta{
+    position: absolute;
+    background-color: var(--cor0trans);
+    width: 100%;
+    height: 1px;
+    top: 20%;
+}
+.funcion-box{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex-wrap: wrap;
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+}
+.num{
+    position: absolute;
+    background-color: var(--cor0);
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    top: 0;
+    right: 0;
+}
+.funcion-icone{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor0trans);
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    border-radius: 100%;
+    border: 1px solid var(--cor0);
+}
+.funcion-box-title{
+    margin: 15px;
+}
+.funcion-box-text{
+    margin-bottom: 50px;
+}
+/*Section Product*/
+.product-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 100px;
+    background-color: var(--cor2);
+}
+.product-conteudo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 550px;
+    width: 100%;
+    padding: 30px;
+}
+.product-tag{
+    margin: 5px;
+    background-color: var(--cor3trans);
+    border: 1px solid var(--cor0);
+    color: var(--cor0);
+    text-align: center;
+    padding: 1px;
+    max-width: 200px;
+    width: 100%;
+    border-radius: 20px;
+    font-size: 16px
+}
+.product-title{
+    margin: 30px;
+    font-size: 30px;
+    line-height: 1.6em;
+    color: var(--cor4);
+    text-align: center;
+}
+.product-text{
+    margin: 20px;
+    color: var(--cor6);
+    text-align: center;
+}
+.product-lista{
+    padding: 15px;
+}
+
+
+
+
+
+
+
+.btn-saibaMais{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 50px;
+    text-align: center;
+    border: 1px solid var(--cor0);
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 380px;
+    width: 100%;
+}
+.link-saiba-mais{
+   text-decoration: none;
+    color: var(--cor4);
+}
+.btn-saibaMais img{
+    width: 16px;
+    height: 16px;
+}
+.btn-saibaMais:hover {
+    background-color: var(--cor0trans);
 }
