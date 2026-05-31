@@ -4,9 +4,10 @@
 :root{
     --cor0trans:#00db7c9a;
     --cor0: #03E182;
+    --cor1: #c9dbd3;
     --cor2: #075655;
     --cor3trans: #1d1d1d8c;
-    --cor3: #0000;
+    --cor3: #000000;
     --cor4: #ffff;
     --cor5: #24242454;
     --cor6: #c2c2c2;
@@ -148,8 +149,7 @@ nav a:hover{
     text-decoration: none;
     color: var(--cor4);
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
-    border: 2px solid var(--cor3);
+    font-size: 18px;    
 }
 .btn-whatsapp{
     padding: 15px;
@@ -308,7 +308,7 @@ nav a:hover{
     text-align: center;
     align-items: center;
     flex-wrap: wrap;
-    max-width: 700px;
+    max-width: 680px;
     width: 100%;
     padding: 30px;
 }
@@ -351,7 +351,8 @@ nav a:hover{
     flex-direction: column;
     text-align: center;
     flex-wrap: wrap;
-    max-width: 400px;
+    max-width: 300px;
+    margin: 20px;
     width: 100%;
     height: auto;
 }
@@ -370,8 +371,8 @@ nav a:hover{
     align-items: center;
     justify-content: center;
     background-color: var(--cor0trans);
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     margin: auto;
     border-radius: 100%;
     border: 1px solid var(--cor0);
@@ -382,6 +383,23 @@ nav a:hover{
 .funcion-box-text{
     margin-bottom: 50px;
 }
+.funcion-btn-simule{
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px var(--cor5);
+    text-align: center;
+    background-color: var(--cor2);
+    max-width: 300px;
+    width: 100%;
+}
+.funcion-btn-simule a{
+    text-decoration: none;
+    color: var(--cor4);
+}
+.funcion-btn-simule:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}    
 /*Section Product*/
 .product-container{
     display: flex;
@@ -452,11 +470,6 @@ nav a:hover{
     transition: 0.3s;
     box-shadow: 2px 2px 10px var(--cor0); 
 }
-
-
-
-
-
 .btn-saibaMais{
     display: flex;
     align-items: center;
@@ -479,4 +492,95 @@ nav a:hover{
 }
 .btn-saibaMais:hover {
     background-color: var(--cor0trans);
+}
+
+/*section Sobre*/
+.sobre-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor1);
+    flex-wrap: wrap;
+}
+.sobre-conteudo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 700px;
+    width: 100%;
+    margin-top: 130px;
+    margin-bottom: 130px;
+}
+.sobre-img img{
+    max-width: 600px;
+    width: 100%;
+    border: 1px solid var(--cor3);
+    border-radius: 25px;
+    box-shadow: 5px 0px 5px var(--cor5);
+    margin: 50px;
+    margin-top: 130px;
+}
+.sobre-tag{
+    background-color: var(--cor3trans);
+    border: 1px solid var(--cor0);
+    color: var(--cor0);
+    padding: 1px;
+    max-width: 180px;
+    width: 100%;
+    border-radius: 20px;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.sobre-title{
+    
+    font-size: 30px;
+    line-height: 1.6em;
+    color: var(--cor2);
+    max-width: 700px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.sobre-text{
+    color: var(--cor3);
+    max-width: 700px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+.sobre-group{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.sobre-group-box{
+    display: flex;
+    max-width: 700px;
+    background-color: var(--cor3trans);
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--cor0);
+    width: 100%;
+    gap: 10px;
+}
+.imagem{
+    max-width: 50px;
+    width: 100%;
+}
+.sobre-icone{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: var(--cor0);
+}
+.box-title{
+    color: var(--cor4);
+}
+.box-title p{
+    color: var(--cor6);
 }
