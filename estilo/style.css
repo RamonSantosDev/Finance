@@ -8,7 +8,7 @@
     --cor2: #075655;
     --cor3trans: #1d1d1d8c;
     --cor3: #000000;
-    --cor4: #ffff;
+    --cor4: #ffffff;
     --cor5: #24242454;
     --cor6: #c2c2c2;
     --cor7: #010c0c;
@@ -42,7 +42,7 @@ header{
     left: 0;
     z-index: 50;
 
-    transition: all;
+    transition: all 0.3s ease;
 }
 .logo img{
     width: 200px;
@@ -64,9 +64,6 @@ nav a:hover{
    transition: 0.3s;
    color: var(--cor0);
 }
-main{
-    height: calc(100vh - 224px);
-}
 .btn{
     padding: 10px;
     border-radius: 50px;
@@ -75,11 +72,12 @@ main{
     font-family: Arial, Helvetica, sans-serif;
     max-width: 150px;
     width: 100%;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .btn:hover{
     box-shadow: 2px 2px 10px var(--cor0);
     transform: scale(1.1);
-    transition: 0.3s;
 }
 .btn a{
     color: var(--cor4);
@@ -143,10 +141,11 @@ main{
     background-color: var(--cor0);
     max-width: 200px;
     width: 100%;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .btn-simule:hover{
     transform: scale(1.1);
-    transition: 0.3s;
 }
 .btn-simule a{
     text-decoration: none;
@@ -162,11 +161,10 @@ main{
     max-width: 180px;
     width: 100%;
 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .btn-whatsapp:hover{
     transform: scale(1.1);
-    transition: 0.3s;
-
 }
 .btn-whatsapp a{
     text-decoration: none;
@@ -195,6 +193,34 @@ main{
     margin-top: 130px;
     
 }
+.whatsapp-fixo{
+    display: flex;
+    width: 100%;
+    justify-content: end;
+}
+.btn-simule-fixo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    padding: 15px;
+    border-radius: 100%;
+    
+    text-align: center;
+    background-color: var(--cor0);
+    width: 30px;
+    height: 30px;
+    margin: 20px;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-simule-fixo:hover{
+    box-shadow: 2px 2px 5px var(--cor0trans);
+    transform: scale(1.1);
+}
+
+
 /*section-beneficios*/
 .beneficio-container{
     display: flex;
@@ -316,7 +342,7 @@ main{
     padding: 30px;
 }
 .funcion-tag{
-    Margin: 5px;
+    margin: 5px;
     background-color: var(--cor3trans);
     border: 1px solid var(--cor3);
     color: var(--cor0);
@@ -411,7 +437,6 @@ main{
     flex-wrap: wrap;
     padding: 100px;
     background-color: var(--cor2);
-    flex: 1 1 100vh;
 }
 .product-conteudo{
     display: flex;
@@ -432,7 +457,7 @@ main{
     max-width: 200px;
     width: 100%;
     border-radius: 20px;
-    font-size: 16px
+    font-size: 16px;
 }
 .product-title{
     margin: 30px;
@@ -509,6 +534,7 @@ main{
 .sobre-conteudo{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     max-width: 700px;
@@ -525,6 +551,10 @@ main{
     margin: 50px;
     margin-top: 130px;
 }
+.tag{
+    max-width: 700px;
+    width: 100%;
+}
 .sobre-tag{
     background-color: var(--cor3trans);
     border: 1px solid var(--cor0);
@@ -538,7 +568,6 @@ main{
     margin-bottom: 20px;
 }
 .sobre-title{
-    
     font-size: 30px;
     line-height: 1.6em;
     color: var(--cor2);
@@ -555,6 +584,7 @@ main{
 }
 .sobre-group{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     flex-wrap: wrap;
     gap: 20px;
@@ -588,4 +618,207 @@ main{
 }
 .box-title p{
     color: var(--cor6);
+}
+
+/*section FAQ*/
+.faq-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--cor1);
+    padding-bottom: 130px;
+}
+.faq-conteudo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 700px;
+    width: 100%;
+    margin-top: 130px;
+    margin-bottom: 100px;
+}
+.faq-tag{
+    background-color: var(--cor3trans);
+    border: 1px solid var(--cor0);
+    color: var(--cor0);
+    padding: 1px;
+    max-width: 120px;
+    width: 100%;
+    border-radius: 20px;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.faq-title{
+    font-size: 30px;
+    line-height: 1.6em;
+    color: var(--cor2);
+    max-width: 700px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.faq-card{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 700px;
+    border-bottom: 1px solid var(--cor0);
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    width: 100%;
+}
+.faq-card:last-child{
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.faq-question{
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--cor3);
+    cursor: pointer;
+    outline: none;
+    list-style: none;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: end;
+    transition: color 0.3s ease;
+}
+.faq-question::after{
+    content: '\1F783';
+    font-size: 0.8rem;
+    transition:0.3s ease;
+    color: var(--cor0);
+}
+.faq-card[open] .faq-question::after {
+    transform: rotate(180deg);
+}
+
+.faq-question:hover {
+    color: var(--cor2);
+}
+
+/* Resposta */
+.faq-answer {
+    margin-top: 10px;
+    color: var(--cor3);
+    line-height: 1.6;
+    padding-left: 5px;
+    animation: fadeIn 0.4s ease;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/*section contato*/
+.contato-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 100px;
+    background-color: var(--cor2);
+}
+.contato-conteudo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 650px;
+    width: 100%;
+    padding: 30px
+}
+.contato-tag{
+    margin: 5px;
+    background-color: var(--cor3trans);
+    border: 1px solid var(--cor0);
+    color: var(--cor0);
+    text-align: center;
+    padding: 1px;
+    max-width: 200px;
+    width: 100%;
+    border-radius: 20px;
+    font-size: 16px;
+}
+.contato-title{
+    margin: 30px;
+    font-size: 30px;
+    line-height: 1.6em;
+    color: var(--cor4);
+    text-align: center;
+}
+
+.contato-text{
+    margin: 20px;
+    color: var(--cor6);
+    text-align: center;
+}
+.box-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.contato-group-box{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 550px;
+    width: 100%;
+    height: auto;
+    background-color: var(--cor3trans);
+    border-radius: 15px;
+    border: 1px solid var(--cor0);
+    padding: 10px;
+    margin: 10px;
+}
+.box-icone{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: var(--cor0);
+}
+.box-icone img{
+    width: 25px;
+    height: 25px;
+}
+.contato-box-title h3{
+    color: var(--cor6);
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.contato-box-title p{
+    color: var(--cor4);
+
+}
+.contato-btn{
+    padding: 10px;
+    border-radius: 50px;
+    text-align: center;
+    border: 1px solid var(--cor0);
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 550px;
+    width: 100%;
+    margin-top: 30px;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.contato-btn:hover{
+    transform: scale(1.1);
+    box-shadow: 2px 2px 10px var(--cor0); 
+}
+.contato-btn a{
+    text-decoration: none;
+    color: var(--cor4);
+    font-size: 18px;
 }
