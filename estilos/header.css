@@ -19,7 +19,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    width: 80vw;
+    width: 70vw;
 }
 .logo img{
     width: 200px;
@@ -70,7 +70,7 @@ menu{
     width: 100%;
 }
 
-@media screen and (max-width: 1200px) /*Celular*/{
+@media screen and (max-width: 1300px) /*Celular*/{
     span#burguer{
         display: block;
         background-color: rgb(48, 48, 48);
