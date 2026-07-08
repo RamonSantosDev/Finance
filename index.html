@@ -3,27 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilo/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/header.css">
     <link rel="shortcut icon" href="/imagens/icon.ico" type="image/x-icon">
     <title>Finance+</title>
     <meta name="description" content="Finance+ oferece crédito inteligente com aprovação rápida e taxas competitivas.">
+    
 </head>
-<body>
+<body" onresize="mudouTamanho()">
     <header>
-        <div class="logo">
-            <a href="#"><img src="imagens/logo-3D.png" alt="logo"></a>
+        <div id="menu">
+            <div class="logo">
+                <a href="#"><img src="imagens/logo-3D.png" alt="logo"></a>
+            </div>
+            <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
+            <menu id="itens">
+                <nav>
+                    <a href="#inicio">inicio</a>
+                    <a href="#beneficios">Beneficios</a>
+                    <a href="#produtos">Produtos</a>
+                    <a href="#sobre">Sobre</a>
+                    <a href="#contato">Contato</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer">Seja um Parceiro</a>
+                </nav>
+                <div class="btn">
+                    <a href="#" target="_blank" rel="noopener noreferrer">Área do Parceiro</a>
+                </div>
+            </menu>
+            
         </div>
-        <nav>
-            <a href="#inicio">inicio</a>
-            <a href="#beneficios">Beneficios</a>
-            <a href="#produtos">Produtos</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#contato">Contato</a>
-            <a href="#" target="_blank" rel="noopener noreferrer">Seja um Parceiro</a>
-        </nav>
-        <div class="btn">
-            <a href="#" target="_blank" rel="noopener noreferrer">Área do Parceiro</a>
-        </div>
+        
     </header>
 
     <main>
@@ -525,5 +535,21 @@
             </div>
         </section>
     </main>
+    <script>
+        function mudouTamanho(){
+            if(window.innerWidth <= 768){
+                itens.style.display = 'flex'
+            }else{
+                itens.style.display = 'none'
+            }
+        }
+        function clickMenu(){
+            if(itens.style.display == 'flex'){
+                itens.style.display = 'none'
+            }else{
+                itens.style.display = 'flex'
+            }
+        }
+    </script>
 </body>
 </html>
