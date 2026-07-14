@@ -25,6 +25,7 @@ header{
     width: 200px;
 
 }
+
 nav{
     display: flex;
     flex-wrap: wrap;
@@ -70,16 +71,32 @@ menu{
     width: 100%;
 }
 
-@media screen and (max-width: 1300px) /*Celular*/{
+@media screen and (max-width: 1460px) /*Celular*/{
     span#burguer{
-        display: block;
-        background-color: rgb(48, 48, 48);
-        color: white;
-        text-align: left;
-        padding: 10px;
+        display: flex;
+        background-color: var(--cor7);
+        color: var(--cor0);
+        font-size: 1.5em;
     }
     menu{
         display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--cor7);
+        padding: 20px 0;
+        gap: 15px;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.15);
+    }
+    menu.ativo{
+        display: flex; /* só aparece quando tem a classe .ativo */
+    }
+    nav{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
     span#burguer:hover{
         background-color: white;

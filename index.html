@@ -6,12 +6,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
     <link rel="stylesheet" href="estilos/style.css">
     <link rel="stylesheet" href="estilos/header.css">
+    <link rel="stylesheet" href="estilos/style_inicio.css">
     <link rel="shortcut icon" href="/imagens/icon.ico" type="image/x-icon">
     <title>Finance+</title>
     <meta name="description" content="Finance+ oferece crédito inteligente com aprovação rápida e taxas competitivas.">
     
 </head>
-<body" onresize="mudouTamanho()">
+<body>
     <header>
         <div id="menu">
             <div class="logo">
@@ -42,8 +43,8 @@
                 <div class="container-text">
                     <h1>Crédito inteligente para <span class="destaque">transformar</span> sua vida financeira.</h1>
                     <p>Soluções financeiras modernas com aprovação rápida, taxas competitivas e atendimento 100% humanizado. Do empréstimo consignado à antecipação do FGTS, temos o crédito certo para você. </p>
-                </div>
-                <div class="btn-group">
+
+                    <div class="btn-group">
                     <div class="btn-simule">
                         <a href="#">Solicitar Empréstimo</a>
                     </div>
@@ -51,6 +52,8 @@
                         <a href="#">Falar no Whatsapp</a>
                     </div>
                 </div>
+                </div>
+                
                 <div class="group-prova">
                     <p>100% Seguro</p>
                     <p>4.9★ no Google</p>
@@ -58,7 +61,7 @@
                 </div>
             </div>
             <div class="container-img">
-                <img src="imagens/mulher.png" alt="mulher" width="600" height="500">
+                
             </div>
             <div class="whatsapp-fixo">
                 <div class="btn-simule-fixo">
@@ -537,25 +540,11 @@
     </main>
     <script>
         const itens = document.getElementById("itens");
-
-        function mudouTamanho() {
-            if (window.innerWidth > 1300) {
-                itens.style.display = "flex";
-            } else {
-                itens.style.display = "none";
-            }
-        }
+        const burguer = document.getElementById("burguer");
 
         function clickMenu() {
-            if (itens.style.display === "flex") {
-                itens.style.display = "none";
-            } else {
-                itens.style.display = "flex";
-            }
+            itens.classList.toggle("ativo");
         }
-
-        window.addEventListener("resize", mudouTamanho);
-        window.addEventListener("load", mudouTamanho);
     </script>
 </body>
 </html>
