@@ -68,12 +68,10 @@
     transform: scale(1.1);
 }
 .btn-simule a{
-    display: flex;
     text-decoration: none;
     color: var(--cor4);
-    font-family: Arial, Helvetica, sans-serif;
-    
-    font-size: 18px;    
+    font-family: var(--font-padrao);
+      
 }
 .btn-whatsapp{
     padding: 15px;
@@ -167,21 +165,38 @@
         width: 90%;
 
     }
+    .btn-simule{
+        padding: 15px;
+        border-radius: 15px;
+        box-shadow: 2px 2px 2px 1px var(--cor0);
+        text-align: center;
+        background-color: var(--cor0);
+        max-width: 150px;
+        width: 100%;
+        margin-right: 30px;
+
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .btn-simule a{
+        text-decoration: none;
+        color: var(--cor4);
+        font-family: Arial, Helvetica, sans-serif;
+    
+        font-size: 12px;
+    }
     .btn-whatsapp{
+        font-size: 12px;
         padding: 15px;
         border-radius: 15px;
         text-align: center;
         border: 1px solid var(--cor4);
-        max-width: 200px;
+        max-width: 150px;
         width: 100%;
 
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .whatsapp-fixo{
-        display: none;   
-        width: 200px;
-        width: 100%;
-        justify-content: end;
+        display: none;
     }
 
 }
