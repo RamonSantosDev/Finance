@@ -143,6 +143,8 @@
 .funcion-relative{
     position: relative;
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     margin-top: 30px;
 
@@ -241,5 +243,57 @@
         width: 100%;
         border-radius: 20px;
         font-size: 16px;
+    }
+    .beneficio-title{
+        margin: 20px;
+        font-size: 20px;
+        line-height: 1.5em;
+        color: var(--cor4);
+    }
+    .funcion-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        Width: 100vw;
+        padding: 50px;
+        background-color: var(--cor1);
+    }
+    .funcion-conteudo{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        flex-wrap: wrap;
+        max-width: 1000px;        
+        width: 100%;
+        padding: 30px;
+    }
+    .funcion-title{
+        margin: 20px;
+        font-size: 20px;
+        line-height: 1.5em;
+        color: var(--cor2);
+        max-width: 650px;
+        width: 100%;
+    }
+    .funcion-absoluta{
+        display: none;
+        position: absolute;
+        background-color: var(--cor0trans);
+        width: 100%;
+        height: 1px;
+        top: 20%;
+    }
+    .funcion-btn-simule a{
+        font-size: 15px;
+        font-family: var(--font-padrao);
+        text-decoration: none;
+        color: var(--cor4);
+    }
+    .btn{
+        font-size: 15px;
+        font-family: var(--font-padrao);
+        margin-top: 10px;
+        
     }
 }
