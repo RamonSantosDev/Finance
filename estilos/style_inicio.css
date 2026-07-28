@@ -43,6 +43,7 @@
 }
 .destaque{
     color: var(--cor0);
+    -webkit-text-stroke: 1px var(--cor3);
 }
 
 .btn-group{
