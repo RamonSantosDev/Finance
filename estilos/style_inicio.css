@@ -43,7 +43,7 @@
 }
 .destaque{
     color: var(--cor0);
-    -webkit-text-stroke: 1px var(--cor3);
+    -webkit-text-stroke: 1px #000000;
 }
 
 .btn-group{
@@ -198,6 +198,10 @@
     }
     .whatsapp-fixo{
         display: none;
+    }
+    .destaque{
+        color: var(--cor0);
+        -webkit-text-stroke: 1px #000000;
     }
 
 }
