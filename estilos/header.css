@@ -6,7 +6,7 @@ header{
     justify-content: space-evenly;
     flex-wrap: wrap;
     width: 100%;
-    background-color: var(--cor7);
+    background-color: #010c0cfa;
     position: fixed; 
 
     top: 0;
@@ -18,8 +18,8 @@ header{
 #menu{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    width: 70vw;
+    justify-content: space-around;
+    width: 100%;
 }
 .logo img{
     width: 200px;
@@ -38,7 +38,7 @@ nav > a{
     margin: 0 15px;
 }
 nav a:hover{
-   transform: scale(1.1);
+   transform: scale(1.01);
    transition: 0.3s;
    color: var(--cor0);
 }
@@ -71,7 +71,7 @@ menu{
     width: 100%;
 }
 
-@media screen and (max-width: 1460px) /*Celular*/{
+@media screen and (max-width: 1200px) /*Celular*/{
     span#burguer{
         display: flex;
         background-color: var(--cor7);
@@ -85,20 +85,24 @@ menu{
         top: 100%;
         left: 0;
         width: 100%;
-        background-color: var(--cor7);
+        background-color: #010c0cf6;
         padding: 20px 0;
         gap: 15px;
-        box-shadow: 0 10px 15px rgba(0,0,0,0.15);
+        box-shadow: 0 5px 10px var(--cor2);
     }
     menu.ativo{
-        display: flex; /* só aparece quando tem a classe .ativo */
+        display: flex; /* só aparece quando tem a classe .ativo */;
     }
     nav{
         flex-direction: column;
-        align-items: center;
+        align-items: left;
+        width: 100%;
         gap: 10px;
     }
     span#burguer:hover{
         cursor: pointer;
+    }
+    .logo img{
+        width: 150px;
     }
 }
