@@ -21,9 +21,21 @@ header{
     justify-content: space-around;
     width: 100%;
 }
-.logo img{
-    width: 200px;
-
+.logo-fora{
+    display: none;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    font-weight: bold; 
+    margin: 20px;
+}
+.logo a{
+    color: var(--cor0);
+    text-decoration: none;
+    
 }
 
 nav{
@@ -102,7 +114,19 @@ menu{
     span#burguer:hover{
         cursor: pointer;
     }
-    .logo img{
-        width: 150px;
+    .logo{
+        display: none;
+    }
+    .logo-fora{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5em;
+        font-weight: bold; 
+        margin: 20px;
+    }
+    .logo-fora a{
+        color: var(--cor0);
+        text-decoration: none;
     }
 }
